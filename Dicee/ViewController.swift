@@ -13,13 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var dice1: UIImageView!
     @IBOutlet weak var dice2: UIImageView!
     
-    var valueDice1: Int = 0
-    var valueDice2: Int = 0
+    var valueDice1: Int = 6
+    var valueDice2: Int = 6
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.dice1.image = UIImage(named: ("dice\(valueDice1)"));
+        self.dice2.image = UIImage(named: ("dice\(valueDice2)"));
     }
 
     @IBAction func doRoll(_ sender: UIButton) {

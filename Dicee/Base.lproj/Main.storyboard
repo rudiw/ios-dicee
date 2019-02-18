@@ -51,7 +51,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="dice" destination="tsM-K1-mHr" id="tGC-w1-I6T"/>
+                        <outlet property="dice1" destination="tsM-K1-mHr" id="tGC-w1-I6T"/>
                         <outlet property="dice2" destination="5Go-7f-kma" id="D6i-z2-KST"/>
                     </connections>
                 </viewController>

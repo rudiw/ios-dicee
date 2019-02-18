@@ -10,8 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var dice: UIImageView!
+    @IBOutlet weak var dice1: UIImageView!
     @IBOutlet weak var dice2: UIImageView!
+    
+    var valueDice1: Int = 0
+    var valueDice2: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func doRoll(_ sender: UIButton) {
+        valueDice1 = Int.random(in: 1...6)
+        valueDice2 = Int.random(in: 1...6)
         
+        self.dice1.image = UIImage(named: ("dice\(valueDice1)"));
+        self.dice2.image = UIImage(named: ("dice\(valueDice2)"));
+       
     }
     
 }

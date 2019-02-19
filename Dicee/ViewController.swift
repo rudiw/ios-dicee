@@ -22,17 +22,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.dice1.image = UIImage(named: diceImages[valueDice1]);
-        self.dice2.image = UIImage(named: diceImages[valueDice2]);
+        randomAndUpdateDices()
     }
 
     @IBAction func doRoll(_ sender: UIButton) {
+        randomAndUpdateDices()
+    }
+    
+    func randomAndUpdateDices() {
         valueDice1 = Int.random(in: 0...5)
         valueDice2 = Int.random(in: 0...5)
         
         self.dice1.image = UIImage(named: diceImages[valueDice1]);
         self.dice2.image = UIImage(named: diceImages[valueDice2]);
-       
     }
     
 }
